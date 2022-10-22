@@ -1,0 +1,24 @@
+component divide
+% PS Divide :0.75
+% This block divides the first input signal by the second one:
+%
+% y = u_1 ./ u_2
+%
+% All connections are physical signal ports.
+
+% Copyright 2005-2018 The MathWorks, Inc.
+
+inputs
+    I1; % :left
+    I2; % :left
+  end
+
+  outputs
+    O; % :right
+  end
+  
+  equations
+    O == I1 ./ I2;
+  end
+
+end
