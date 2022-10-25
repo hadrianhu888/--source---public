@@ -1,2 +1,4 @@
 #ignores the following patterns 
 */
+.vs
+.dependencygraph
