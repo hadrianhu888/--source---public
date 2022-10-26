@@ -1,8 +1,8 @@
-component divide
-% PS Divide :0.75
-% This block divides the first input signal by the second one:
+component custom_divide
+% PS Custom Divide :1.00
+% This block divides the first input signal by the second one unless the second value is zero, then it uses the first value.
 %
-% y = u_1 ./ u_2
+% y = u_1 ./ u_2 else y = u_1.
 %
 % All connections are physical signal ports.
 
@@ -18,10 +18,10 @@ inputs
   end
   
   equations 
-    if I2 >= I1
+    if I2 >= I1 && I2 ~= 0
         O == I1 ./ I2;  
     else 
-        O = I1;
+        O == I1;
     end 
   end
 
